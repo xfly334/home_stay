@@ -2,39 +2,55 @@
 .bg{
     background: url("../img/bg.jpg") no-repeat;
     background-size: contain;
-    height: 1.78rem;
+    width: 7.5rem;
+    height: 3.56rem;
+    margin:0 auto;
 }
 /*入住离开时间*/
 .box{
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top:0.5rem;
+    padding-top:1rem;
 }
 .container{
-    width: 3.38rem;
+    width: 6.67rem;
 }
 .nav{
-    width: 3.38rem;
-    height: 0.93rem;
-    padding:0 0.16rem;
+    width: 6.67rem;
+    height: 1.86rem;
+    padding:0 0.32rem;
     position: absolute;
-    top:-0.5rem;
+    top:-1rem;
     background: #fff;
     box-shadow:  0px 0px 20px #aaa;
 }
 .nav-content{
     display: flex;
     justify-content: space-between;
-    padding:0.09rem 0;
+    padding:0.18rem 0;
+}
+.nav-content:nth-child(2){
+    padding-bottom:0;
 }
 .nav-content .text-1, .nav-content .text-2{
-    font-size: 10px;
+    font-size: 0.2rem;
     font-weight: 600;
 }
 
 .nav-content .text-2{
     color: rgb(153,153,153);
+}
+select.text-2{
+    appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;
+    border: none;
+    outline: none;
+    direction: rtl;
+}
+select.text-2 option{
+    direction: ltr;
 }
 .hr{
     border-bottom: 1px solid rgb(216,216,216);
@@ -45,12 +61,12 @@
 }
 
 .nav-btn{
-    width: 1.8rem;
-    height:0.265rem;
-    font-size:15px;
+    width: 3.6rem;
+    height:0.53rem;
+    font-size:.3rem;
     color: #fff;
     text-align: center;
-    line-height: 0.265rem;
+    line-height: 0.53rem;
     background: rgb(217,94,87);
     -webkit-border-radius:100px;
     -moz-border-radius:100px;
@@ -58,42 +74,42 @@
 }
 /*民宿简介*/
 .introduction{
-    padding-top:11px;
+    padding-top:.22rem;
 }
 .introduction-title{
     display: flex;
     justify-content:space-between;
 }
 .introduction-title h1{
-    font-size:25px;
+    font-size:.5rem;
     color: rgb(51,51,51);
 }
 .introduction-title a{
-    font-size: 11px;
+    font-size: .22rem;
 }
 .introduction-content{
-    margin-top:0.07rem;
+    margin-top:0.14rem;
     display: flex;
 }
 .introduction-content img{
-    width:1.635rem;
-    height:1.185rem;
+    width:3.306rem;
+    height:2.37rem;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     border-radius:5px;
 }
 .introduction-content > p{
-    width: 1.43rem;
-    height:0.845rem;
-    font-size:11px;
+    width: 2.86rem;
+    height:1.69rem;
+    font-size:.22rem;
     line-height: 1.25;
-    margin-left: 0.11rem;
+    margin-left: 0.22rem;
     font-weight: 600;
 }
 /*入住、离店日期显示*/
 .live-date{
-    height:0.53rem;
-    margin-top:0.16rem;
+    height:1.06rem;
+    margin-top:0.64rem;
     background: rgb(92,158,254);
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
@@ -102,60 +118,152 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0.2rem 0.1rem 0.2rem 0.18rem;
+    padding:0.4rem 0.2rem 0.4rem 0.36rem;
 }
 .date-title, .date-week{
-    font-size:11px;
+    font-size:.22rem;
     display: flex;
     flex-direction:column;
 }
 .date-content .date-month{
-    font-size:17px;
-    margin-right:0.07rem;
+    font-size:.34rem;
+    margin-right:0.28rem;
 }
 .live-date-day{
-    font-size:13px;
+    font-size:.26rem;
 }
 .date-content{
     display: flex;
     align-items: flex-end;
-    padding-top:0.08rem;
+    padding-top:0.16rem;
 }
 .date-right{
-    font-size:14px;
+    font-size:.28rem;
+}
+/* 选择日期 */
+.select-date{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: none;
+}
+.select-date-header{
+    display: flex;
+    height: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom:1px solid #e2e2e2;
+}
+
+.select-date-sum{
+    padding:.1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index:10;
+    background: #fff;
+}
+.select-date-sum > .select-date-sum-day{
+    width: 1rem;
+    height:.675rem;
+    line-height:.675rem;
+    text-align: center;
+    font-size:.3rem;
+    border: 1px solid #e2e2e2;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+   
+}
+.select-date-sum > .select-date-sum-day > .number{
+    color: #d95e57;
+}
+.select-date-header  .border-right{
+    width: 1px;
+    height: 2rem;
+    position: absolute;
+    top:0;
+    left: 50%;
+    border-right: 1px solid #e2e2e2;
+}
+.select-date-box{
+    flex:1;
+    text-align: center;
+    
+}
+.select-date-box-title{
+    color: rgb(170,170,170);
+    font-size:.36rem;
+    padding-bottom:.13rem;
+}
+.select-date-box-time{
+    font-size: .45rem;
+    padding-top:.13rem;
+}
+#text-2{
+    width: 100%;
+    height: 100%;
+}
+.layui-laydate-static,.layui-laydate-content table{
+    width: 100%;
+    height: 100%;
+}
+.group-btn{
+    display: flex;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+.group-btn > .cancel-btn, .group-btn > .save-btn {
+    flex:1;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-size:0.36rem;
+    color: #fff;
+}
+.group-btn > .cancel-btn{
+    background: #bfbfbf;
+}
+.group-btn > .save-btn{
+    background: #f76264;
 }
 /*民宿信息*/
 
 .item-img{
     width: 100%;
-    height:2.2rem;
+    height:4.4rem;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     border-radius:5px;
-    margin: 0.15rem 0;
+    margin: 0.3rem 0;
 }
 .item-box .item-title{
-    font-size:25px;
+    font-size:.5rem;
 }
 .item-box .item-text{
-    margin:0.1rem 0;
-    font-size:11px;
+    margin:0.2rem 0;
+    font-size:.22rem;
 }
 .item-footer{
     display: flex;
     justify-content: space-between;
-    padding:0 0.1rem;
+    padding:0 0.2rem;
     align-items: center;
-    height:0.51rem;
+    height:1.02rem;
     background:rgb(251,251,251);
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     border-radius:5px;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.2rem;
 }
 .item-footer .item-footer-left{
     color: rgb(51,51,51);
-    font-size:15px;
+    font-size:.3rem;
 }
 .item-footer-right {
     display: flex;
@@ -163,20 +271,20 @@
 }
 .item-footer-right .item-footer-right-money{
     color: rgb(217,94,87);
-    font-size:21px;
-    margin-right:0.11rem;
+    font-size:.42rem;
+    margin-right:0.44rem;
     vertical-align: middle;
 }
 .item-footer-right .item-footer-right-status{
-    width:0.7rem;
-    height:0.29rem;
-    line-height:0.29rem;
+    width:1.4rem;
+    height:0.58rem;
+    line-height:0.58rem;
     background:rgb(217,217,217);
     color: #fff;
     -webkit-border-radius:100px;
     -moz-border-radius:100px;
     border-radius:100px;
-    font-size:13px;
+    font-size:.26rem;
     text-align: center;
 }
 .item-footer-right .item-footer-right-status.bespeak{

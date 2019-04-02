@@ -1,99 +1,231 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>民宿</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/public.css">
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-<div class="bg"></div>
-<div class="box">
-    <div class="container">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="box">
+      <div class="container">
         <div class="nav">
-            <div class="nav-content hr">
-                <span class="text-1 rgb102">入住/离开时间</span>
-                <span class="text-2">请选择入住离开时间</span>
-            </div>
-            <div class="nav-content">
-                <span class="text-1 rgb102">入住人数</span>
-                <span class="text-2">请选择入住人数</span>
-            </div>
-            <div class="nav-footer">
-                <div class="nav-btn">
-                    确认入住
+          <div class="nav-content hr">
+            <span class="text-1 rgb102">入住/离开时间</span>
+            <span id="text-2-date" class="text-2">请选择入住离开时间</span>
+            <!-- 日期选择 start -->
+            <div class="select-date">
+              <div class="select-date-header">
+                <div class="select-date-box">
+                  <div class="select-date-box-title">入住时间</div>
+                  <div class="select-date-box-time test-item" id="start-date">
+                    选择日期
+                  </div>
                 </div>
+                <div class="select-date-sum">
+                  <div class="select-date-sum-day">
+                    共<span id="number-day" class="number">1</span>晚
+                  </div>
+                </div>
+                <div class="border-right"></div>
+                <div class="select-date-box">
+                  <div class="select-date-box-title">离开时间</div>
+                  <div class="select-date-box-time test-item" id="end-date">
+                    选择日期
+                  </div>
+                </div>
+              </div>
+              <!-- <div id="text-2" class="test-item"></div> -->
+              <div class="group-btn">
+                <div class="cancel-btn">取消</div>
+                <div class="save-btn">保存</div>
+              </div>
             </div>
+            <!-- 日期选择 end -->
+          </div>
+          <div class="nav-content">
+            <span class="text-1 rgb102">入住人数</span>
+            <!-- <span class="text-2">请选择入住人数</span> -->
+            <select dir="rtl" name="" id="" class="text-2">
+              <!-- <option value="0">请选择入住人数</option> -->
+              <option value="1">1人</option>
+              <option value="2">2人</option>
+              <option value="3">3人</option>
+              <option value="4">4人</option>
+            </select>
+          </div>
+          <div class="nav-footer">
+            <div class="nav-btn">
+              确认入住
+            </div>
+          </div>
         </div>
         <div class="introduction">
-            <div class="introduction-title">
-                <h1>民宿简介</h1>
-                <a href="#" class="rgb102">查看更多&nbsp;></a>
-            </div>
-            <div class="introduction-content">
-                <img src="./img/jianjie.jpg" alt="简介">
-                <p class="rgb102">
-                    初遇银坪坐落在海拔高1090m的银坪岭，建在500m处的山腰处，风景秀丽，环境清幽，更有流水潺潺的小溪，茂密的竹林，晚上星空璀璨，令人目旷神怡...
-                </p>
-            </div>
+          <div class="introduction-title">
+            <h1>民宿简介</h1>
+            <a href="#" class="rgb102">查看更多&nbsp;></a>
+          </div>
+          <div class="introduction-content">
+            <img src="./img/jianjie.jpg" alt="简介" />
+            <p class="rgb102">
+              初遇银坪坐落在海拔高1090m的银坪岭，建在500m处的山腰处，风景秀丽，环境清幽，更有流水潺潺的小溪，茂密的竹林，晚上星空璀璨，令人目旷神怡...
+            </p>
+          </div>
         </div>
         <div class="live-date">
-            <div class="date-enter">
-                <span class="date-enter-title date-title">入住日期</span>
-                <div class="date-enter-content date-content">
-                    <span class="date-month">03月14日</span><span class="date-week">周四</span>
-                </div>
+          <div class="date-enter">
+            <span class="date-enter-title date-title">入住日期</span>
+            <div class="date-enter-content date-content">
+              <span class="date-month">03月14日</span
+              ><span class="date-week">周四</span>
             </div>
-            <div class="live-date-day">
-                1晚
+          </div>
+          <div class="live-date-day">
+            1晚
+          </div>
+          <div class="date-leave">
+            <span class="date-leave-title date-title">离店日期</span>
+            <div class="date-leave-content date-content">
+              <span class="date-month">03月15日</span
+              ><span class="date-week">周五</span>
             </div>
-            <div class="date-leave">
-                <span class="date-leave-title date-title">离店日期</span>
-                <div class="date-leave-content date-content">
-                    <span class="date-month">03月15日</span><span class="date-week">周五</span>
-                </div>
-            </div>
-            <div class="date-right">
-                >
-            </div>
+          </div>
+          <div class="date-right">
+            >
+          </div>
         </div>
         <div class="box-content">
-            <div class="content-item">
-                <img class="item-img" src="./img/fangjian.jpg" alt="">
-                <div class="item-box">
-                    <h2 class="item-title rgb102">青城山上山</h2>
-                    <p class="item-text rgb153">建筑面积：30平方米，楼层：1层，床型：双人床2米，1张，最多入住人数2人</p>
-                    <div class="item-footer">
-                        <span class="item-footer-left">标准间</span>
-                        <div class="item-footer-right">
-                            <div class="item-footer-right-money">￥645</div>
-                            <div class="item-footer-right-status">满房</div>
-                        </div>
-                    </div>
+          <div class="content-item">
+            <img class="item-img" src="./img/fangjian.jpg" alt="" />
+            <div class="item-box">
+              <h2 class="item-title rgb102">青城山上山</h2>
+              <p class="item-text rgb153">
+                建筑面积：30平方米，楼层：1层，床型：双人床2米，1张，最多入住人数2人
+              </p>
+              <div class="item-footer">
+                <span class="item-footer-left">标准间</span>
+                <div class="item-footer-right">
+                  <div class="item-footer-right-money">￥645</div>
+                  <div class="item-footer-right-status">满房</div>
                 </div>
+              </div>
             </div>
-            <div class="content-item">
-                <img class="item-img" src="./img/fangjian.jpg" alt="">
-                <div class="item-box">
-                    <h2 class="item-title rgb102">青城山上山</h2>
-                    <p class="item-text rgb153">建筑面积：30平方米，楼层：1层，床型：双人床2米，1张，最多入住人数2人</p>
-                    <div class="item-footer">
-                        <span class="item-footer-left">标准间</span>
-                        <div class="item-footer-right">
-                            <div class="item-footer-right-money">￥645</div>
-                            <div class="item-footer-right-status bespeak">预约</div>
-                        </div>
-                    </div>
+          </div>
+          <div class="content-item">
+            <img class="item-img" src="./img/fangjian.jpg" alt="" />
+            <div class="item-box">
+              <h2 class="item-title rgb102">青城山上山</h2>
+              <p class="item-text rgb153">
+                建筑面积：30平方米，楼层：1层，床型：双人床2米，1张，最多入住人数2人
+              </p>
+              <div class="item-footer">
+                <span class="item-footer-left">标准间</span>
+                <div class="item-footer-right">
+                  <div class="item-footer-right-money">￥645</div>
+                  <div class="item-footer-right-status bespeak">预约</div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+    <script type="text/javascript">
+      document.documentElement.style.fontSize =
+        (document.documentElement.clientWidth / 750) * 100 + "px";
+    </script>
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
 
-</div>
+    <script>
+      //两个时间相差天数 兼容firefox chrome
+      function datedifference(sDate1, sDate2) {
+        //sDate1和sDate2是2006-12-18格式
+        var dateSpan, tempDate, iDays;
+        sDate1 = Date.parse(sDate1);
+        sDate2 = Date.parse(sDate2);
+        dateSpan = sDate2 - sDate1;
+        dateSpan = Math.abs(dateSpan);
+        iDays = Math.floor(dateSpan / (24 * 3600 * 1000));
+        return iDays;
+      }
+    </script>
+    <script src="./js/laydate.js"></script>
+    <!-- 选择时间插件 -->
+    <script>
+      laydate.render({
+        elem: "#start-date",
+        trigger: "click",
+        calendar: true, //开启公历节日
+        // range: true,  //日期范围
+        format: "yyyy-MM-dd",
+        showBottom: false, //不出现底部栏
+        min: 0, //最小日期今天
+        value: new Date(),
+        ready: function(date) {
+          console.log(date); //得到初始的日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+          $("#start-date").text(
+            `${date.year}-${(date.month =
+              date.month > 10 ? date.month : "0" + date.month)}-${(date.date =
+              date.date > 10 ? date.date : "0" + date.date)}`
+          );
+        },
+        done: function(value, date, endDate) {
+          $("#start-date").text(value);
+        },
+        theme: "#d95e57"
+      });
 
-</body>
+      laydate.render({
+        elem: "#end-date",
+        trigger: "click",
+        calendar: true, //开启公历节日
+        // range: true,  //日期范围
+        format: "yyyy-MM-dd",
+        value: new Date(new Date().setDate(new Date().getDate() + 1)),
+        showBottom: false, //不出现底部栏
+        min: 0, //最小日期今天
+        ready: function(date) {
+          console.log(date); //得到初始的日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+        },
+        done: function(value, date, endDate) {
+          $("#end-date").text(value);
+          var day = datedifference($("#start-date").text(), value);
+          $("#number-day").text(day);
+        },
+        theme: "#d95e57"
+      });
+    </script>
+    <script>
+      $(function() {
+        var startDate = $("#start-date").text();
+        var endDate = $("#end-date").text();
+        setTimeout(function() {
+          startDate = $("#start-date").text();
+           endDate = $("#end-date").text();
+           $("#text-2-date").text(startDate + "/" + endDate);
+        }, 100);
+        $(".save-btn").click(function() {
+          startDate = $("#start-date").text();
+          endDate = $("#end-date").text();
+          $(".select-date").hide();
+          $("#text-2-date").text(startDate + "/" + endDate);
+        });
+        $(".cancel-btn").click(function() {
+          $(".select-date").hide();
+        });
+        
+        $("#text-2-date").click(function() {
+          $(".select-date").show();
+        });
+        $(".select-date");
+      });
+    </script>
+  </body>
 </html>
