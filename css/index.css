@@ -1,0 +1,184 @@
+/*背景*/
+.bg{
+    background: url("../img/bg.jpg") no-repeat;
+    background-size: contain;
+    height: 1.78rem;
+}
+/*入住离开时间*/
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top:0.5rem;
+}
+.container{
+    width: 3.38rem;
+}
+.nav{
+    width: 3.38rem;
+    height: 0.93rem;
+    padding:0 0.16rem;
+    position: absolute;
+    top:-0.5rem;
+    background: #fff;
+    box-shadow:  0px 0px 20px #aaa;
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    padding:0.09rem 0;
+}
+.nav-content .text-1, .nav-content .text-2{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.nav-content .text-2{
+    color: rgb(153,153,153);
+}
+.hr{
+    border-bottom: 1px solid rgb(216,216,216);
+}
+.nav-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn{
+    width: 1.8rem;
+    height:0.265rem;
+    font-size:15px;
+    color: #fff;
+    text-align: center;
+    line-height: 0.265rem;
+    background: rgb(217,94,87);
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+}
+/*民宿简介*/
+.introduction{
+    padding-top:11px;
+}
+.introduction-title{
+    display: flex;
+    justify-content:space-between;
+}
+.introduction-title h1{
+    font-size:25px;
+    color: rgb(51,51,51);
+}
+.introduction-title a{
+    font-size: 11px;
+}
+.introduction-content{
+    margin-top:0.07rem;
+    display: flex;
+}
+.introduction-content img{
+    width:1.635rem;
+    height:1.185rem;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.introduction-content > p{
+    width: 1.43rem;
+    height:0.845rem;
+    font-size:11px;
+    line-height: 1.25;
+    margin-left: 0.11rem;
+    font-weight: 600;
+}
+/*入住、离店日期显示*/
+.live-date{
+    height:0.53rem;
+    margin-top:0.16rem;
+    background: rgb(92,158,254);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.2rem 0.1rem 0.2rem 0.18rem;
+}
+.date-title, .date-week{
+    font-size:11px;
+    display: flex;
+    flex-direction:column;
+}
+.date-content .date-month{
+    font-size:17px;
+    margin-right:0.07rem;
+}
+.live-date-day{
+    font-size:13px;
+}
+.date-content{
+    display: flex;
+    align-items: flex-end;
+    padding-top:0.08rem;
+}
+.date-right{
+    font-size:14px;
+}
+/*民宿信息*/
+
+.item-img{
+    width: 100%;
+    height:2.2rem;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    margin: 0.15rem 0;
+}
+.item-box .item-title{
+    font-size:25px;
+}
+.item-box .item-text{
+    margin:0.1rem 0;
+    font-size:11px;
+}
+.item-footer{
+    display: flex;
+    justify-content: space-between;
+    padding:0 0.1rem;
+    align-items: center;
+    height:0.51rem;
+    background:rgb(251,251,251);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    margin-bottom: 0.1rem;
+}
+.item-footer .item-footer-left{
+    color: rgb(51,51,51);
+    font-size:15px;
+}
+.item-footer-right {
+    display: flex;
+    align-items: center;
+}
+.item-footer-right .item-footer-right-money{
+    color: rgb(217,94,87);
+    font-size:21px;
+    margin-right:0.11rem;
+    vertical-align: middle;
+}
+.item-footer-right .item-footer-right-status{
+    width:0.7rem;
+    height:0.29rem;
+    line-height:0.29rem;
+    background:rgb(217,217,217);
+    color: #fff;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    font-size:13px;
+    text-align: center;
+}
+.item-footer-right .item-footer-right-status.bespeak{
+    background:rgb(217,94,87);
+}
