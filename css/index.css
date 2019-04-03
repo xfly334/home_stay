@@ -256,19 +256,19 @@ select.text-2 option{
     bottom:.2rem;
     left:.2rem;
     width: .98rem;
-    height:.35rem;
+    height:.35rem;  
     -webkit-border-radius:1rem;
     -moz-border-radius:1rem;
     border-radius:1rem;
     display: flex;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     background: rgba(0,0,0,.5);
 }
 .content-item-img-icon .icon-left,.content-item-img-icon .icon-right{
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 .content-item-img-icon .icon-right{
     width: .13rem;
@@ -278,6 +278,7 @@ select.text-2 option{
 .content-item-img-icon .icon-left > img{
     width: .2rem;
     height: .16rem;
+    margin-right:.1rem;
 }
 .content-item-img-icon .icon-left > span{
     font-size:.18rem;
