@@ -40,12 +40,8 @@
     color: rgb(153,153,153);
 }
 select.text-2{
-    appearance:none;  
-    -moz-appearance:none;  
-    -webkit-appearance:none;
-    border: none;
-    outline: none;
     direction: rtl;
+    background: #fff;
 }
 select.text-2 option{
     direction: ltr;
@@ -241,13 +237,55 @@ select.text-2 option{
 }
 /*民宿信息*/
 
+.content-item-img{
+    width: 100%;
+    height:4.4rem;
+    position: relative;
+    margin: 0.3rem 0;
+}
 .item-img{
     width: 100%;
     height:4.4rem;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
     border-radius:5px;
-    margin: 0.3rem 0;
+
+}
+.content-item-img-icon {
+    position: absolute;
+    bottom:.2rem;
+    left:.2rem;
+    width: .98rem;
+    height:.35rem;
+    -webkit-border-radius:1rem;
+    -moz-border-radius:1rem;
+    border-radius:1rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    background: rgba(0,0,0,.5);
+}
+.content-item-img-icon .icon-left,.content-item-img-icon .icon-right{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.content-item-img-icon .icon-right{
+    width: .13rem;
+    height: .13rem;
+}
+
+.content-item-img-icon .icon-left > img{
+    width: .2rem;
+    height: .16rem;
+}
+.content-item-img-icon .icon-left > span{
+    font-size:.18rem;
+    color: #fff;
+}
+.content-item-img-icon .icon-right > img{
+    width: .13rem;
+    height: .13rem;
 }
 .item-box .item-title{
     font-size:.5rem;
@@ -296,4 +334,109 @@ select.text-2 option{
 }
 .item-footer-right .item-footer-right-status.bespeak{
     background:rgb(217,94,87);
+}
+/*预约模态框*/
+.predetermine-model{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    display: none;
+}
+.predetermine-model .predetermine-title{
+    background:#fff;
+    padding:.24rem .52rem;
+}
+.predetermine-model .predetermine-title .predetermine-title-name{
+    font-size:.36rem;
+    font-weight: 600;
+}
+.predetermine-model .predetermine-title .predetermine-title-cont{
+    display: flex;
+    margin-top:.2rem;
+}
+.predetermine-model .predetermine-title .predetermine-title-cont> div{
+    margin-right:.55rem;
+    color: rgb(102,102,102);
+    font-size:.32rem;
+}
+.predetermine-msg{
+    margin-top:.68rem;
+    font-size: .36rem;
+    font-weight: 600;
+}
+.predetermine-msg .predetermine-msg-title{
+    padding-left:.52rem;
+}
+.predetermine-msg-cont{
+    margin-top:.22rem;
+    background: #fff;
+
+}
+.predetermine-msg-cont .row{
+    height:.8rem;
+    border-top:1px solid rgb(235,235,235);
+    display: flex;
+    align-items: center;
+    padding-left:.52rem;
+}
+.predetermine-msg-cont .row:first-child{
+    border-top:0;
+}
+.predetermine-msg-cont .row .row-name{
+    font-size:.3rem;
+    color:rgb(160,160,160);
+    flex:2;
+}
+.predetermine-msg-cont .row .row-cont{
+    flex:3;
+}
+#room-num{
+    font-size: .3rem;
+    font-weight: 600;
+    width: 100%;
+    background: #fff;
+}
+.predetermine-msg-cont .row .row-cont input{
+    font-size:.3rem;
+    color:rgb(160,160,160);
+}
+.predetermine-msg-cont .row .row-sum{
+    font-size:.42rem;
+    color: rgb(247,98,100);
+}
+.predetermine-msg-foot{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:1.2rem;
+}
+.predetermine-msg-foot .predetermine-msg-foot-btn{
+    width: 6.9rem;
+    height: .8rem;
+    -webkit-border-radius:1rem;
+    -moz-border-radius:1rem;
+    border-radius:1rem;
+    background:rgb(247,98,100);
+    color: #fff;
+    text-align: center;
+    font-size:.32rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.predetermine-msg-foot .predetermine-msg-foot-btn .sub{
+    border-right:0.01rem solid #fff;
+    padding-right:.24rem;
+}
+.predetermine-msg-foot .predetermine-msg-foot-btn .sub-mon{
+    padding-left:.24rem;
 }

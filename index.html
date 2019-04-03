@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/public.css" />
     <link rel="stylesheet" href="./css/index.css" />
-
+    <link rel="stylesheet prefetch" href="./css/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./css/default-skin/default-skin.css">
+    <script src="./js/photoswipe.min.js"></script>
+    <script src="./js/photoswipe-ui-default.min.js"></script>
   </head>
   <body>
     <div class="bg"></div>
@@ -105,7 +108,20 @@
         </div>
         <div class="box-content">
           <div class="content-item">
-            <img class="item-img" src="./img/fangjian.jpg" alt="" />
+            <div class="content-item-img">
+              <img class="item-img" src="./img/fangjian.jpg" alt="" />
+              <div class="content-item-img-icon">
+                <div class="icon-left">
+                  <img src="./img/img.png" alt="">
+                  <span>4</span>
+                </div>
+                <div class="icon-right">
+                  <img src="./img/1.png" alt="">
+                </div>
+              </div>
+            </div>
+
+
             <div class="item-box">
               <h2 class="item-title rgb102">青城山上山</h2>
               <p class="item-text rgb153">
@@ -141,118 +157,105 @@
     </div>
 
     <!--预约弹框 start -->
-    
+      <div class="predetermine-model">
+        <div class="predetermine-title">
+            <h1 class="predetermine-title-name">青城山</h1>
+            <div class="predetermine-title-cont"><div>03/14入住</div><div>03/15离店</div><div>一晚</div></div>
+        </div>
+        <div class="predetermine-msg">
+          <h1 class="predetermine-msg-title">填写信息</h1>
+          <div class="predetermine-msg-cont">
+            <div class="row">
+              <div class="row-name">房间数量</div>
+              <div class="row-cont">
+                <select name="" id="room-num">
+                  <option value="1">1间房</option>
+                  <option value="2">2间房</option>
+                  <option value="3">3间房</option>
+                  <option value="4">4间房</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-name">入住人</div>
+              <div class="row-cont">
+                <input type="text" placeholder="入住人姓名">
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-name">手机号</div>
+              <div class="row-cont">
+                <input type="text" placeholder="手机号码" maxlength="11">
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-name">备注</div>
+              <div class="row-cont">
+                <input type="text" placeholder="您的特殊要求">
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-name">总价</div>
+              <div class="row-cont">
+                <div class="row-sum">￥645</div>
+              </div>
+            </div>
+          </div>
+          <div class="predetermine-msg-foot">
+            <div class="predetermine-msg-foot-btn">
+            <div class="sub">提交</div><div class="sub-mon">￥645</div>
+            </div>
+          </div>
+        </div>
+      </div>
     <!--预约弹框 end -->
+    <!-- 点击预览图片 start -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
 
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 点击预览图片 end -->
     <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/laydate.js"></script>
-    <!-- 选择时间插件 -->
-    <script>
-      laydate.render({
-        elem: "#start-date",
-        trigger: "click",
-        calendar: true, //开启公历节日
-        // range: true,  //日期范围
-        format: "yyyy-MM-dd",
-        showBottom: false, //不出现底部栏
-        min: 0, //最小日期今天
-        value: new Date(),
-        ready: function(date) {
-          console.log(date); //得到初始的日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
-          $("#start-date").text(
-            `${date.year}-${(date.month =
-              date.month > 10 ? date.month : "0" + date.month)}-${(date.date =
-              date.date > 10 ? date.date : "0" + date.date)}`
-          );
-        },
-        done: function(value, date, endDate) {
-          $("#start-date").text(value);
-        },
-        theme: "#d95e57"
-      });
-
-      laydate.render({
-        elem: "#end-date",
-        trigger: "click",
-        calendar: true, //开启公历节日
-        // range: true,  //日期范围
-        format: "yyyy-MM-dd",
-        value: new Date(new Date().setDate(new Date().getDate() + 1)),
-        showBottom: false, //不出现底部栏
-        min: 0, //最小日期今天
-        ready: function(date) {
-          console.log(date); //得到初始的日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
-        },
-        done: function(value, date, endDate) {
-          $("#end-date").text(value);
-          var day = datedifference($("#start-date").text(), value);
-          $("#number-day").text(day);
-        },
-        theme: "#d95e57"
-      });
-
-      //两个时间相差天数 兼容firefox chrome
-      function datedifference(sDate1, sDate2) {
-          //sDate1和sDate2是2006-12-18格式
-          var dateSpan, tempDate, iDays;
-          sDate1 = Date.parse(sDate1);
-          sDate2 = Date.parse(sDate2);
-          dateSpan = sDate2 - sDate1;
-          dateSpan = Math.abs(dateSpan);
-          iDays = Math.floor(dateSpan / (24 * 3600 * 1000));
-          return iDays;
-      }
-    </script>
-    <script>
-      $(function() {
-        var startDate = $("#start-date").text();
-        var endDate = $("#end-date").text();
-        setTimeout(function() {
-          startDate = $("#start-date").text();
-           endDate = $("#end-date").text();
-            var enterDateMoth = startDate.split('-')[1];
-            var enterDateDay = startDate.split('-')[2];
-            var leaveDateMoth = endDate.split('-')[1];
-            var leaveDateDay = endDate.split('-')[2];
-            $(".date-enter-content > .date-month").text(enterDateMoth+'月'+enterDateDay+'日');
-            $(".date-enter-content > .date-week").text(week(startDate));
-            $(".date-leave-content > .date-month").text(leaveDateMoth+'月'+leaveDateDay+'日');
-            $(".date-leave-content > .date-week").text(week(endDate));
-//           $("#text-2-date").text(startDate + "/" + endDate);
-        }, 100);
-        $(".save-btn").click(function() {
-          startDate = $("#start-date").text();
-          endDate = $("#end-date").text();
-          $(".select-date").hide();
-          $("#text-2-date").text(startDate + "/" + endDate);
-            var enterDateMoth = startDate.split('-')[1];
-            var enterDateDay = startDate.split('-')[2];
-            var leaveDateMoth = endDate.split('-')[1];
-            var leaveDateDay = endDate.split('-')[2];
-            $(".date-enter-content > .date-month").text(enterDateMoth+'月'+enterDateDay+'日');
-            $(".date-enter-content > .date-week").text(week(startDate));
-            $(".date-leave-content > .date-month").text(leaveDateMoth+'月'+leaveDateDay+'日');
-            $(".date-leave-content > .date-week").text(week(endDate));
-
-            var day = $("#number-day").text();
-            $(".live-date-day").text(day+'晚');
-        });
-        $(".cancel-btn").click(function() {
-          $(".select-date").hide();
-        });
-
-        $("#text-2-date").click(function() {
-          $(".select-date").show();
-        });
-        $(".bespeak").click(function(){
-
-        });
-        function week(date){
-            var   s   =  date;
-            return "周"+"天一二三四五六 ".charAt(new   Date(s).getDay())
-        }
-
-      });
-    </script>
+    <!-- 选择时间调用方法 -->
+    <script src="./js/indexdate.js"></script>
+    <!-- 公共方法 -->
+    <script src="./js/public.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
