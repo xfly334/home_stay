@@ -29,7 +29,7 @@
     padding:0.18rem 0;
 }
 .nav-content:nth-child(2){
-    padding-bottom:0;
+    padding-bottom:0.1rem;
 }
 .nav-content .text-1, .nav-content .text-2{
     font-size: 0.2rem;
@@ -288,9 +288,9 @@ select.text-2 option{
     line-height:0.58rem;
     background:rgb(217,217,217);
     color: #fff;
-    -webkit-border-radius:100px;
-    -moz-border-radius:100px;
-    border-radius:100px;
+    -webkit-border-radius:1rem;
+    -moz-border-radius:1rem;
+    border-radius:1rem;
     font-size:.26rem;
     text-align: center;
 }

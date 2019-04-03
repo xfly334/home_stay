@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单</title>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize =
+            (document.documentElement.clientWidth / 750) * 100 + "px";
+    </script>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/my-order.css" />
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <ul class="header-list">
+            <li class="active all header-title">
+                <a class="" href="#">
+                    <div>全部</div>
+                </a>
+            </li>
+            <li class="obligation header-title">
+                <a  href="#">
+                    <div>待付款</div>
+                </a>
+            </li>
+            <li class="processed header-title">
+                <a  href="#">
+                    <div>处理中</div>
+                </a>
+            </li>
+            <li class="have-order header-title">
+                <a  href="#">
+                    <div>已接单</div>
+                </a>
+            </li>
+            <li class="succeed header-title">
+                <a href="#">
+                    <div>已完成</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="body">
+    <div class="container">
+        <!-- 全部 start -->
+        <div id="order-all" class="order-content">
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">未付款</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <div class="order-btn"><a href="#">立即付款</a></div>
+                </div>
+            </div>
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">完成</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <div class="order-btn"><a href="#">确认</a></div>
+                </div>
+            </div>
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">已付款</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <!--<div class="order-btn"><a href="#">立即付款</a></div>-->
+                </div>
+            </div>
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">已接单</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <div class="order-btn"><a href="#">一键导航</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 全部end -->
+
+        <!-- 待付款 start -->
+        <div id="not-payment" class="order-content">
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">未付款</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <div class="order-btn"><a href="#">立即付款</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 待付款end -->
+
+        <!-- 处理中 start -->
+        <div id="being-processed" class="order-content">
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">已付款</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <!--<div class="order-btn"><a href="#">立即付款</a></div>-->
+                </div>
+            </div>
+        </div>
+        <!-- 处理中 end -->
+
+        <!-- 已接单 start -->
+        <div id="have-order" class="order-content">
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">已接单</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <div class="order-btn"><a href="#">一键导航</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 已接单 end -->
+
+        <!-- 已完成 start -->
+        <div id="finish" class="order-content">
+            <div class=" order-list">
+                <div class="order-head">
+                    <div class="order-date">日期2019/03/15 :10:11:10</div>
+                    <div class="order-status">完成</div>
+                </div>
+                <div class="order-body">
+                    <div class="order-title">蝉鸣[早餐:双早]</div>
+                    <div class="order-message">03/15入住&nbsp;&nbsp;03/16离店&nbsp;&nbsp;1晚&nbsp;&nbsp;预定1间房</div>
+                </div>
+                <div class="order-foot">
+                    <div class="order-money">
+                        <div class="order-money-title">总价</div>
+                        <div class="order-money-sum">￥680</div>
+                    </div>
+                    <div class="order-btn"><a href="#">确认</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 已完成 end -->
+    </div>
+</div>
+
+
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".header-title").click(function(){
+            var index = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $(".order-content").eq(index).show().siblings().hide();
+        })
+    })
+</script>
+</body>
+</html>

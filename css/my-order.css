@@ -1,0 +1,100 @@
+body{
+    background: #eee;
+}
+.header{
+    height:.9rem;
+    background:#fff;
+}
+.header-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:.9rem;
+}
+.header-list .header-title div{
+    font-size:.3rem;
+    color: rgb(102,102,102);
+    padding: .1rem 0;
+
+}
+.header-list  .active.header-title div, .order-head .order-status{
+    color: rgb(247,99,100);
+}
+.header-list  .active.header-title div{
+    border-bottom: 2px solid red;
+}
+.body{
+    padding-bottom:.2rem;
+}
+.order-list{
+    padding:.28rem .32rem 0;
+    background: #fff;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    margin-top:.2rem;
+}
+.order-head{
+    height:.78rem;
+    border-bottom:1px solid #e1e1e1;
+    display: flex;
+    justify-content: space-between;
+}
+.order-head .order-date, .order-foot .order-money .order-money-title{
+    color: rgb(153,153,153);
+}
+.order-head .order-date, .order-head .order-status{
+    font-size:.24rem;
+}
+.order-body {
+    height:1.52rem;
+    border-bottom:1px solid #e1e1e1;
+    padding:.32rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.order-body .order-title, .order-body .order-message, .order-foot .order-money .order-money-sum{
+    color: rgb(51,51,51);
+}
+.order-body .order-title{
+    font-size:.32rem;
+    font-weight: 600;
+}
+.order-body .order-message, .order-foot .order-money .order-money-title{
+    font-size: .24rem;
+}
+.order-foot{
+    height:.94rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order-foot .order-money{
+    display: flex;
+    align-items: center;
+}
+.order-foot .order-money .order-money-sum{
+    font-size: .4rem;
+}
+.order-foot .order-money .order-money-title {
+    margin-right:.2rem;
+}
+.order-foot .order-btn{
+    width:2.09rem;
+    height:.57rem;
+    line-height:.57rem;
+    background:rgb(247,99,100);
+    border-radius: 1rem;
+    font-size:.3rem;
+    text-align: center;
+}
+.order-foot .order-btn > a{
+    color: #fff;
+}
+.order-content{
+display: none;
+}
+.order-content:first-child{
+    display: block;
+}
