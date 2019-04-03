@@ -1,0 +1,79 @@
+.header{
+    width:7.5rem;
+    height:2.87rem;
+    background: rgb(50,60,72);
+}
+.header-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top:.36rem;
+}
+.header-box > .title{
+    font-size:.33rem;
+    color: #fff;
+    margin-right:.2rem;
+}
+.header-box > img {
+    width: 1.42rem;
+    height:1.42rem;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.box{
+    position: relative;
+}
+.order-all{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    height:1rem;
+    padding:0 .3rem;
+    background:#366c6c;
+    position: absolute;
+    width: 100%;
+    top: 0.3rem;
+}
+.order-all .order-all-a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height:100%;
+}
+.order-all .title{
+    font-size:.34rem;
+}
+.order-all .img{
+    width: .35rem;
+}
+.my-list{
+    padding-top: 1.3rem;
+}
+.my-list > li{
+    border-top:1px solid #b4b4b4;
+}
+.my-list > li:first-child{
+    border-top:0;
+}
+.my-list > li > a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: .88rem;
+}
+.my-list > li > a .title{
+    font-size:.34rem;
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+.my-list > li > a .title >img{
+    width: .35rem;
+    height: .35rem;
+    margin-right: .2rem;
+}
+.my-list > li > a .arrows{
+    width:.35rem;
+}

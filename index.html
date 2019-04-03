@@ -8,9 +8,14 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>民宿</title>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize =
+            (document.documentElement.clientWidth / 750) * 100 + "px";
+    </script>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/public.css" />
     <link rel="stylesheet" href="./css/index.css" />
+
   </head>
   <body>
     <div class="bg"></div>
@@ -42,7 +47,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div id="text-2" class="test-item"></div> -->
               <div class="group-btn">
                 <div class="cancel-btn">取消</div>
                 <div class="save-btn">保存</div>
@@ -54,7 +58,7 @@
             <span class="text-1 rgb102">入住人数</span>
             <!-- <span class="text-2">请选择入住人数</span> -->
             <select dir="rtl" name="" id="" class="text-2">
-              <!-- <option value="0">请选择入住人数</option> -->
+               <option value="0">请选择入住人数</option>
               <option value="1">1人</option>
               <option value="2">2人</option>
               <option value="3">3人</option>
@@ -70,7 +74,7 @@
         <div class="introduction">
           <div class="introduction-title">
             <h1>民宿简介</h1>
-            <a href="#" class="rgb102">查看更多&nbsp;></a>
+            <a href="#" class="rgb102 more"><span>查看更多</span>&nbsp;<img class="arrows" src="./img/2.png" alt=""></a>
           </div>
           <div class="introduction-content">
             <img src="./img/jianjie.jpg" alt="简介" />
@@ -137,25 +141,8 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      document.documentElement.style.fontSize =
-        (document.documentElement.clientWidth / 750) * 100 + "px";
-    </script>
-    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
 
-    <script>
-      //两个时间相差天数 兼容firefox chrome
-      function datedifference(sDate1, sDate2) {
-        //sDate1和sDate2是2006-12-18格式
-        var dateSpan, tempDate, iDays;
-        sDate1 = Date.parse(sDate1);
-        sDate2 = Date.parse(sDate2);
-        dateSpan = sDate2 - sDate1;
-        dateSpan = Math.abs(dateSpan);
-        iDays = Math.floor(dateSpan / (24 * 3600 * 1000));
-        return iDays;
-      }
-    </script>
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/laydate.js"></script>
     <!-- 选择时间插件 -->
     <script>
@@ -201,6 +188,18 @@
         },
         theme: "#d95e57"
       });
+
+      //两个时间相差天数 兼容firefox chrome
+      function datedifference(sDate1, sDate2) {
+          //sDate1和sDate2是2006-12-18格式
+          var dateSpan, tempDate, iDays;
+          sDate1 = Date.parse(sDate1);
+          sDate2 = Date.parse(sDate2);
+          dateSpan = sDate2 - sDate1;
+          dateSpan = Math.abs(dateSpan);
+          iDays = Math.floor(dateSpan / (24 * 3600 * 1000));
+          return iDays;
+      }
     </script>
     <script>
       $(function() {
@@ -209,7 +208,15 @@
         setTimeout(function() {
           startDate = $("#start-date").text();
            endDate = $("#end-date").text();
-           $("#text-2-date").text(startDate + "/" + endDate);
+            var enterDateMoth = startDate.split('-')[1];
+            var enterDateDay = startDate.split('-')[2];
+            var leaveDateMoth = endDate.split('-')[1];
+            var leaveDateDay = endDate.split('-')[2];
+            $(".date-enter-content > .date-month").text(`${enterDateMoth}月${enterDateDay}日`);
+            $(".date-enter-content > .date-week").text(week(startDate));
+            $(".date-leave-content > .date-month").text(`${leaveDateMoth}月${leaveDateDay}日`);
+            $(".date-leave-content > .date-week").text(week(endDate));
+//           $("#text-2-date").text(startDate + "/" + endDate);
         }, 100);
         $(".save-btn").click(function() {
           startDate = $("#start-date").text();
@@ -224,7 +231,13 @@
         $("#text-2-date").click(function() {
           $(".select-date").show();
         });
-        $(".select-date");
+
+        function week(date){
+            var   s   =  date;
+
+            return "周"+"天一二三四五六 ".charAt(new   Date(s).getDay())
+        }
+
       });
     </script>
   </body>
